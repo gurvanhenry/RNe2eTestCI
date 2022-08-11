@@ -23,11 +23,6 @@ jobs:
           yarn install
           npx pod-install
 
-      - name: install npm libs and pods
-        run: |
-          yarn
-          npx pod-install
-
       - name: Install Detox Dependencies
         run: |
           brew tap wix/brew
