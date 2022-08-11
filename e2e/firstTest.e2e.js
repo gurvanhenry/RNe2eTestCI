@@ -1,6 +1,12 @@
+/* eslint-env detox/detox */
+
 describe('Example', () => {
   beforeAll(async () => {
     await device.launchApp();
+  });
+
+  afterAll(async () => {
+    await device.reloadReactNative();
   });
 
   beforeEach(async () => {
@@ -21,3 +27,4 @@ describe('Example', () => {
     await expect(element(by.text('World!!!'))).toBeVisible();
   });
 });
+ 
