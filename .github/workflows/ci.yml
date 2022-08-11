@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  e2e:
+    runs-on: macos-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: install npm and pods
+        run: |
+          npm install
+          npx pod-install
+
+      #- name: ...
