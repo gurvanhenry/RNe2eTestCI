@@ -12,9 +12,29 @@ jobs:
 
       - uses: actions/checkout@v2
 
-      - name: install npm and pods
+      - name: Install Yarn Dependencies
+        run: yarn install
+
+      - name: Install Pod Dependencies
+        run: npx pod-install
+
+      - name: install npm libs and pods
         run: |
-          npm install
+          yarn install
           npx pod-install
 
-      #- name: ...
+      - name: install npm libs and pods
+        run: |
+          yarn
+          npx pod-install
+
+      - name: Install Detox Dependencies
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+
+      - name: Run Detox Build
+        run: yarn e2e:ios:build
+
+      - name: Run Detox Test(s)
+        run: yarn e2e:ios:run
