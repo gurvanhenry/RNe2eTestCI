@@ -8,12 +8,17 @@ import {
 } from 'react-native';
 
 import {useState} from 'react';
+import {Button} from './components/Button';
 
-const App = () => {
-  const [greeting, setGreeting] = useState(undefined);
+export function App() {
+  const [greeting, setGreeting] = useState('');
 
   const onButtonPress = value => {
     setGreeting(value);
+  };
+
+  const onBackPress = () => {
+    setGreeting(false);
   };
 
   if (greeting) {
@@ -26,6 +31,9 @@ const App = () => {
           alignItems: 'center',
         }}>
         <Text style={{fontSize: 25}}>{greeting}!!!</Text>
+        <View style={{marginTop: 20}}>
+          <Button text={'Go back'} onPress={() => onBackPress()} />
+        </View>
       </View>
     );
   } else {
@@ -41,11 +49,11 @@ const App = () => {
               alignItems: 'center',
             }}>
             <Text style={{fontSize: 25, marginBottom: 30}}>Welcome</Text>
-            <TouchableOpacity
+            <Button
               testID="hello_button"
-              onPress={() => onButtonPress('Hello')}>
-              <Text style={{color: 'blue', marginBottom: 20}}>Say Hello</Text>
-            </TouchableOpacity>
+              onPress={() => onButtonPress('Hello')}
+              text={'Say Hello'}
+            />
             <TouchableOpacity
               testID="world_button"
               onPress={() => onButtonPress('World')}>
@@ -63,6 +71,4 @@ const App = () => {
       </SafeAreaView>
     );
   }
-};
-
-export default App;
+}
