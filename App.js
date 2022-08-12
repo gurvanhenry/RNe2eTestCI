@@ -12,7 +12,6 @@ import {
   SafeAreaView,
   ScrollView,
   Text,
-  useColorScheme,
   View,
   TouchableOpacity,
 } from 'react-native';

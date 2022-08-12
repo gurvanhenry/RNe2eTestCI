@@ -1,6 +1,4 @@
-/**
- * @format
- */
+/* eslint-env jest */
 
 import 'react-native';
 import React from 'react';
@@ -11,4 +9,5 @@ import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   renderer.create(<App />);
+  expect(true).toBe(true);
 });
