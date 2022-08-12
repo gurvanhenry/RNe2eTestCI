@@ -1,4 +1,4 @@
-# RNe2eTestCI
+# RNe2eTestCIv2
 
 ## install npm packages
 

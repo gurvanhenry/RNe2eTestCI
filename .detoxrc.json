@@ -5,8 +5,8 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/RNe2eTestCI.app",
-      "build": "xcodebuild -workspace ios/RNe2eTestCI.xcworkspace -scheme RNe2eTestCI -sdk iphonesimulator -derivedDataPath ios/build"
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/RNe2eTestCIv2.app",
+      "build": "xcodebuild -workspace ios/RNe2eTestCIv2.xcworkspace -scheme RNe2eTestCIv2 -sdk iphonesimulator -derivedDataPath ios/build"
     },
     "android": {
       "type": "android.apk",

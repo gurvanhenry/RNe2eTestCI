@@ -1,5 +1,5 @@
 {
-  "name": "rne2etestci",
+  "name": "rne2etestciv2",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "e2e:ios:build": "detox build -c ios",
     "e2e:ios:run": "detox test -c ios",
     "e2e:ios:run-reuse": "detox test -c ios --reuse"
@@ -20,18 +20,32 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^28.1.3",
+    "@types/react-native": "^0.69.3",
+    "@types/react-test-renderer": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
     "babel-jest": "^28.1.3",
     "detox": "^19.9.1",
-    "detox-recorder": "^1.0.151",
     "eslint": "^7.32.0",
     "eslint-plugin-detox": "^1.0.0",
     "eslint-plugin-jest": "^26.8.2",
-    "jest": "28.1.3",
+    "jest": "^28.1.3",
     "jest-circus": "^28.1.3",
     "metro-react-native-babel-preset": "^0.70.3",
-    "react-test-renderer": "18.0.0"
+    "react-test-renderer": "18.0.0",
+    "typescript": "^4.4.4"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }

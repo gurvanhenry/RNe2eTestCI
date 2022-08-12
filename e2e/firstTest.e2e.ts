@@ -17,7 +17,7 @@ describe('Example', () => {
     // expect by id
     await expect(element(by.id('welcome'))).toBeVisible();
     // expect by text
-    await expect(element(by.text('welcome'))).toBeVisible();
+    await expect(element(by.text('Welcome'))).toBeVisible();
     // try by
   });
 

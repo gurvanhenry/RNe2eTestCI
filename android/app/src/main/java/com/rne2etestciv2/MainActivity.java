@@ -1,4 +1,4 @@
-package com.rne2etestci;
+package com.rne2etestciv2;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "RNe2eTestCI";
+    return "RNe2eTestCIv2";
   }
 
   /**

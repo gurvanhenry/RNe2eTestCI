@@ -1,4 +1,4 @@
-package com.rne2etestci.newarchitecture.components;
+package com.rne2etestciv2.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

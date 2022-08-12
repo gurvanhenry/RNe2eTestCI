@@ -1,4 +1,4 @@
-package com.rne2etestci.newarchitecture;
+package com.rne2etestciv2.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.rne2etestci.BuildConfig;
-import com.rne2etestci.newarchitecture.components.MainComponentsRegistry;
-import com.rne2etestci.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.rne2etestciv2.BuildConfig;
+import com.rne2etestciv2.newarchitecture.components.MainComponentsRegistry;
+import com.rne2etestciv2.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
