@@ -1,6 +1,7 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
-  "eslint.validate": ["javascript"]
- }
+  }
+}
