@@ -3,14 +3,14 @@ import {SafeAreaView, ScrollView, StatusBar, View, Text} from 'react-native';
 import {Button} from './components/Button';
 
 export function App() {
-  const [greeting, setGreeting] = useState('');
+  const [displayHelloWorld, setDisplayHelloWorld] = useState(false);
 
-  const onButtonPress = value => {
-    setGreeting(value);
+  const onPressHello = () => {
+    setDisplayHelloWorld(true);
   };
 
   const onBackPress = () => {
-    setGreeting('');
+    setDisplayHelloWorld(false);
   };
 
   return (
@@ -18,7 +18,7 @@ export function App() {
       <StatusBar barStyle={'dark-content'} />
 
       <ScrollView>
-        {greeting ? (
+        {displayHelloWorld ? (
           <View
             style={{
               flex: 1,
@@ -26,7 +26,7 @@ export function App() {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text style={{fontSize: 25}}>{greeting}!!!</Text>
+            <Text style={{fontSize: 25}}>{'Hello World!!!'}</Text>
             <View style={{marginTop: 20}}>
               <Button onPress={() => onBackPress()}>Go back</Button>
             </View>
@@ -41,20 +41,8 @@ export function App() {
               alignItems: 'center',
             }}>
             <Text style={{fontSize: 25, marginBottom: 30}}>Welcome</Text>
-            <Button
-              testID="hello_button"
-              onPress={() => onButtonPress('Hello')}>
+            <Button testID="hello_button" onPress={() => onPressHello()}>
               Say Hello
-            </Button>
-            <Button
-              testID="world_button"
-              onPress={() => onButtonPress('World')}>
-              Say World
-            </Button>
-            <Button
-              testID="goodbye_button"
-              onPress={() => onButtonPress('Goodbye, World')}>
-              Say Goodbye
             </Button>
           </View>
         )}
