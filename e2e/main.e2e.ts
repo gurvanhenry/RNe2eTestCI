@@ -1,12 +1,13 @@
 import {expect} from 'detox';
 
-describe('Example', () => {
+describe('Main', () => {
   it('should have welcome screen', async () => {
-    // expect by id
+    // by testID (encouraged by detox)
     await expect(element(by.id('welcome'))).toBeVisible();
-    // expect by text
+    // by text
     await expect(element(by.text('Welcome'))).toBeVisible();
-    // try by label
+    // by label
+    await expect(element(by.label('Welcome'))).toBeVisible();
   });
 
   it('should show hello screen after tap', async () => {
