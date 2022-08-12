@@ -25,3 +25,8 @@ yarn run e2e:ios:run-reuse
 # detox recorder tool
 
 Try it : https://github.com/wix/DetoxRecorder
+
+## run lint
+
+yarn lint
+yarn lint --fix
