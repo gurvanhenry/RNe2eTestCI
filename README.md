@@ -30,3 +30,7 @@ Try it : https://github.com/wix/DetoxRecorder
 
 yarn lint
 yarn lint --fix
+
+## Detox code examples
+
+https://github.com/wix/Detox/tree/master/examples/demo-react-native-jest

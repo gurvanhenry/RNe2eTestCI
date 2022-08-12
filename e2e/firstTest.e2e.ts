@@ -1,24 +1,12 @@
-/* eslint-env detox/detox */
+import {expect} from 'detox';
 
 describe('Example', () => {
-  beforeAll(async () => {
-    await device.launchApp();
-  });
-
-  afterAll(async () => {
-    await device.reloadReactNative();
-  });
-
-  beforeEach(async () => {
-    await device.reloadReactNative();
-  });
-
   it('should have welcome screen', async () => {
     // expect by id
     await expect(element(by.id('welcome'))).toBeVisible();
     // expect by text
     await expect(element(by.text('Welcome'))).toBeVisible();
-    // try by
+    // try by label
   });
 
   it('should show hello screen after tap', async () => {
