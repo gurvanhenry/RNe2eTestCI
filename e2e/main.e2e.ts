@@ -1,4 +1,4 @@
-import {expect} from 'detox';
+import {expect, waitFor} from 'detox';
 
 describe('Main', () => {
   it('should have welcome screen', async () => {
@@ -21,5 +21,16 @@ describe('Main', () => {
     await expect(element(by.id('welcomeTypeText'))).toHaveText(
       'You typed :wooaoo:',
     );
+  });
+});
+
+describe('Tricky', () => {
+  // waitFor is equivalent to expect
+  // eslint-disable-next-line jest/expect-expect
+  it('should change screen after a delay of 3 seconds', async () => {
+    await element(by.id('hello_button_delay')).tap();
+    await waitFor(element(by.text('Hello World!!!')))
+      .toBeVisible()
+      .withTimeout(5000);
   });
 });

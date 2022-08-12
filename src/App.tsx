@@ -17,6 +17,12 @@ export function App() {
     setDisplayHelloWorld(true);
   };
 
+  const onPressHelloDelay = () => {
+    setTimeout(() => {
+      setDisplayHelloWorld(true);
+    }, 3000);
+  };
+
   const onBackPress = () => {
     setDisplayHelloWorld(false);
   };
@@ -50,6 +56,11 @@ export function App() {
             <Text style={{fontSize: 25, marginBottom: 30}}>Welcome</Text>
             <Button testID="hello_button" onPress={() => onPressHello()}>
               Say Hello
+            </Button>
+            <Button
+              testID="hello_button_delay"
+              onPress={() => onPressHelloDelay()}>
+              Say Hello in few seconds
             </Button>
             <TextInput
               testID="welcomeInput"
