@@ -14,4 +14,12 @@ describe('Main', () => {
     await element(by.id('hello_button')).tap();
     await expect(element(by.text('Hello World!!!'))).toBeVisible();
   });
+
+  it('should show me what I typed', async () => {
+    await expect(element(by.id('welcomeInput'))).toBeVisible();
+    await element(by.id('welcomeInput')).typeText('wooaoo');
+    await expect(element(by.id('welcomeTypeText'))).toHaveText(
+      'You typed :wooaoo:',
+    );
+  });
 });

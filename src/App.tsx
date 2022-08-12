@@ -1,9 +1,17 @@
 import React, {useState} from 'react';
-import {SafeAreaView, ScrollView, StatusBar, View, Text} from 'react-native';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  View,
+  Text,
+  TextInput,
+} from 'react-native';
 import {Button} from './components/Button';
 
 export function App() {
   const [displayHelloWorld, setDisplayHelloWorld] = useState(false);
+  const [enteredText, setEnteredText] = useState('');
 
   const onPressHello = () => {
     setDisplayHelloWorld(true);
@@ -16,7 +24,6 @@ export function App() {
   return (
     <SafeAreaView>
       <StatusBar barStyle={'dark-content'} />
-
       <ScrollView>
         {displayHelloWorld ? (
           <View
@@ -44,6 +51,23 @@ export function App() {
             <Button testID="hello_button" onPress={() => onPressHello()}>
               Say Hello
             </Button>
+            <TextInput
+              testID="welcomeInput"
+              placeholder="type here..."
+              value={enteredText}
+              onChangeText={setEnteredText}
+              style={{
+                marginTop: 8,
+                fontSize: 18,
+                width: 200,
+                padding: 10,
+                margin: 10,
+                borderWidth: 1,
+                borderColor: 'grey',
+                color: 'pink',
+              }}
+            />
+            <Text testID="welcomeTypeText">You typed :{enteredText}:</Text>
           </View>
         )}
       </ScrollView>
