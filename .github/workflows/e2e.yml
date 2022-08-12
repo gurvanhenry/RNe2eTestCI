@@ -1,0 +1,29 @@
+name: e2e
+
+on: workflow_dispatch
+
+jobs:
+  e2e-ios:
+    runs-on: macos-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Install Yarn Dependencies
+        run: yarn install
+
+      - name: Install Pod Dependencies
+        run: npx pod-install
+
+      - name: Install Detox Dependencies
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+
+      - name: Run Detox Build
+        run: yarn e2e:ios:build
+
+      - name: Run Detox Test(s)
+        run: yarn e2e:ios:run
+
+  # e2e-android:

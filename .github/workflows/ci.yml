@@ -1,13 +1,10 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  e2e:
-    runs-on: macos-latest
+  ci:
+    runs-on: ubuntu-latest
     steps:
 
       - uses: actions/checkout@v2
@@ -15,16 +12,10 @@ jobs:
       - name: Install Yarn Dependencies
         run: yarn install
 
-      - name: Install Pod Dependencies
-        run: npx pod-install
-
-      - name: Install Detox Dependencies
+      - name: Run lint
         run: |
-          brew tap wix/brew
-          brew install applesimutils
+          yarn lint
 
-      - name: Run Detox Build
-        run: yarn e2e:ios:build
-
-      - name: Run Detox Test(s)
-        run: yarn e2e:ios:run
+      - name: Run test
+        run: |
+          yarn test
