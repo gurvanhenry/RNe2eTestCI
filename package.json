@@ -10,7 +10,10 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "e2e:ios:build": "detox build -c ios",
     "e2e:ios:run": "detox test -c ios",
-    "e2e:ios:run-reuse": "detox test -c ios --reuse"
+    "e2e:ios:run-reuse": "detox test -c ios --reuse",
+    "e2e:android:build": "detox build -c android",
+    "e2e:android:run": "detox test -c android",
+    "e2e:android:run-reuse": "detox test -c android --reuse"
   },
   "dependencies": {
     "react": "18.0.0",
